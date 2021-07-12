@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Egypt</a>
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [ngClass]="{active: currentPage == 'home'}">
+          <a class="nav-link" routerLink="/home" routerLinkActive="testActive" (click)="currentPage = 'students'">Home</a>
+        </li>
+        <li class="nav-item"  [ngClass]="{active: currentPage == 'weather'}">
+          <a class="nav-link" routerLink="/weather" routerLinkActive="testActive" (click)="currentPage = 'teachers'">Weather</a>
+        </li>
+        <li class="nav-item"  [ngClass]="{active: currentPage == 'tech-ideas'}">
+          <a class="nav-link" routerLink="/tech-ideas" routerLinkActive="testActive" (click)="currentPage = 'books'">Tech-Ideas</a>
+        </li>
+        <li class="nav-item"  [ngClass]="{active: currentPage == 'cities'}">
+          <a class="nav-link" routerLink="/cities" routerLinkActive="testActive" (click)="currentPage = 'books'">Cities</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  

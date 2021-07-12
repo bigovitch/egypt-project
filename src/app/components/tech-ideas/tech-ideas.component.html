@@ -1,0 +1,46 @@
+<form [formGroup]="registrationForm">
+    <p>
+        <label>UserName</label>
+        <input type="text" class="username" formControlName="username">
+       <br>
+        <span *ngIf="usernameControl.touched && usernameControl.errors?.required">
+            <br> this is a required field
+        </span>
+        
+        <span *ngIf="usernameControl.touched && usernameControl.errors?.minLength">
+            <br>  your name must be at least 3 characters
+        </span>
+       <!-- {{ firstNameControl.valid}} -->
+        <!--valid touched and dirty -->
+    </p>
+    <p>
+    <label>Password</label>
+        <input type="text" class="password" formControlName="password">
+    </p>
+    <!-- <p>
+        <label>email</label>
+            <input type="email" formControlName="email">
+        </p> -->
+        <button type="button"(click)="onSubmit()"[disabled]="registrationForm.invalid" class="btn btn-success">Submit</button>
+
+</form>
+
+<form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput2">Password</label>
+        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="password">
+      </div>
+    
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+    </div>
+    <button type="button" class="btn btn-success">Send</button>
+  </form>
+
+
+    

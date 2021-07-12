@@ -1,0 +1,9 @@
+<!-- {{ currentCity}} -->
+<div class="list-group">
+    <a [routerLink]="['/city/name/attractionSites',city.attractionSites]"class="list-group-item list-group-item-action " *ngFor=" let city of cityList">
+        {{ city.attractionSites}} 
+    
+    </a>
+    
+  </div>
+

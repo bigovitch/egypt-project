@@ -1,0 +1,39 @@
+<!-- <table>
+<tr>
+    <th>City Name</th>
+    <th>Attraction City</th>
+</tr>
+<tr *ngFor=" let info of CityInfo">
+<td>{{ info.name}}</td>
+<td>{{ info.attractionSites}}</td>
+</tr>
+</table> -->
+
+
+<!-- <table class="table table-striped">
+  <thead>
+  <tr>
+    
+    <th scope="col">City Name</th>
+    <th scope="col">Attraction Sites</th>
+    
+    
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let info of CityInfo">
+    
+    
+    <td>{{ info.name }}</td>
+    <td>{{ info.attractionSites }}</td>
+    
+  </tr>
+  </tbody>
+</table> -->
+<div class="list-group">
+    <a [routerLink]="['/city/attractionSites',city.attractionSites]"class="list-group-item list-group-item-action " *ngFor=" let city of cityList">
+        {{ city.name}} 
+    
+    </a>
+    
+  </div>
